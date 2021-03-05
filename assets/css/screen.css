@@ -484,6 +484,7 @@ for small screen(<720px):
   background-color: #fff;
   font-size: 15px;
   color: #4575f5 !important;
+  margin-right: 10px;
 }
 #cover .tag_large {
   padding: 7px 10px;
