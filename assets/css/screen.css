@@ -213,7 +213,6 @@ for small screen(<720px):
   position: absolute;
   z-index: 5;
   top: 0;
-  left: 30px;
   width: 123px;
   height: 60px;
   margin: 0 0;
@@ -1249,8 +1248,8 @@ body.page-template {
   #logo {
     position: absolute;
     display: inline-block;
-    left: 50px;
     right: 50px;
+    left: 50px;
     top: 0;
     height: 50px;
     margin: 0 auto;
