@@ -1162,8 +1162,8 @@ body.author-template #cover p {
   position: absolute;
   left: 80px;
   top: 78px; /* 78px = (310(#cover height) - 144(self height)) / 2 */
-  width: 144px;
-  height: 144px;
+  width: 100px;
+  height: 100px;
   border-radius: 100%;
   background: url(../images/pc/default_pic_l.png) no-repeat center;
   background-size: cover;
