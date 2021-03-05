@@ -484,7 +484,7 @@ for small screen(<720px):
   border: solid 1px #4575f5;
   background-color: #fff;
   font-size: 15px;
-  color: #4575f5;
+  color: #4575f5 !important;
 }
 #cover video {
   display: none; /* show/remove by script */
