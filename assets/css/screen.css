@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
   font-weight: 300; /* @@iolo 200 -> 300, 200 for retina only! */
   color: #505050;
   background-color: #fff;
@@ -19,7 +19,6 @@ h4,
 h5,
 h6 {
   font-family: "Noto Sans KR", sans-serif;
-  font-weight: 400;
   color: #1e1e1e;
 }
 
