@@ -57,9 +57,9 @@ asset_url: /assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets
 google_analytics:
   ua: "G-SB8V76F3J5"
-# facebook:
-#   app_id: "1204347326263800"
-#   username: nkakao
+facebook:
+  app_id: "1204347326263800"
+  username: nkakao
 instagram:
   username: toktokhan.dev
 github_url:
