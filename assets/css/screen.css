@@ -1155,20 +1155,19 @@ body.tag-template #navbar {
 /* author */
 body.author-template {
 }
-
-body.author-template #cover h1,
-body.author-template #cover p {
-  max-width: 606px;
-  width: 100%; /* @@iolo */
-  margin-left: 254px; /* 254px = 80(padding-left) + 144(#cover-author-image width) + 30(spacing) */
-  text-align: left;
+body.author-template #cover h1 {
+  font-size: 18px;
 }
-
 body.author-template #cover p {
   font-size: 16px;
-  line-height: 1.5;
-  text-align: left;
   color: #808080;
+}
+body.author-template #cover h1,
+body.author-template #cover p {
+  max-width: 300px;
+  width: 100%; /* @@iolo */
+  margin-right: 0px; /* 254px = 80(padding-left) + 144(#cover-author-image width) + 30(spacing) */
+  text-align: left;
 }
 
 #cover-author-image {
