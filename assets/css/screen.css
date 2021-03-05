@@ -1164,6 +1164,13 @@ body.author-template #cover p {
   text-align: left;
 }
 
+body.author-template #cover p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #808080;
+}
+
 #cover-author-image {
   position: absolute;
   left: 80px;
