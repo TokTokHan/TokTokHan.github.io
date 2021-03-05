@@ -7,21 +7,6 @@
   var ogTitle = $('meta[property="og:title"]').attr("content");
   var ogDescription = $('meta[property="og:description"]').attr("content");
   var ogUrl = $('meta[property="og:url"]').attr("content");
-  //   Kakao.Link.createDefaultButton({
-  //     container: "#kakao-link-btn",
-  //     label: ogTitle,
-  //     objectType: 'feed',
-  //     image: {
-  //       src: ogImg,
-  //       width: "300",
-  //       height: "200",
-  //     },
-  //     webButton: {
-  //       text: "똑똑한개발자 기술블로그",
-  //       url: ogUrl, // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-  //     },
-  //     forwardable: true,
-  //   });
   if (window.Kakao) {
     const kakao = window.Kakao;
     // 중복 initialization 방지
@@ -43,7 +28,7 @@
       },
       buttons: [
         {
-          title: "포스트 보러가기",
+          title: "바로가기",
           link: {
             mobileWebUrl: window.location.href,
             webUrl: window.location.href,
