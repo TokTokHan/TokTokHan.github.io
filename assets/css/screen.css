@@ -432,7 +432,7 @@ for small screen(<720px):
   display: table-cell;
   position: relative;
   vertical-align: middle;
-  text-align: center;
+  text-align: left;
   background-color: rgba(12, 12, 48, 0.3);
   overflow: hidden;
   z-index: 2;
@@ -440,9 +440,8 @@ for small screen(<720px):
 
 #cover h1,
 #cover p {
-  text-align: left;
   width: 80%; /* @@iolo */
-  max-width: 780px;
+  max-width: 950px;
   margin: 0 auto;
   color: #fff;
   text-overflow: ellipsis;
