@@ -441,7 +441,7 @@ for small screen(<720px):
 #cover h1,
 #cover p {
   width: 80%; /* @@iolo */
-  max-width: 950px;
+  max-width: 940px;
   margin: 0 auto;
   color: #0a0a0a;
   text-overflow: ellipsis;
@@ -767,11 +767,11 @@ body.page-template #cover {
 }
 
 body.home-template #cover {
-  background-image: url(../images/default_blog_cover.jpg);
+  background-image: url(../images/default_blog_cover.png);
 }
 
 body.post-template #cover {
-  background-image: url(../images/default_post_cover.jpg);
+  background-image: url(../images/default_post_cover.png);
 }
 
 body.page-template #cover {
@@ -1048,7 +1048,7 @@ body.tag-template #navbar {
 #post-next {
   display: table-cell;
   width: 50%;
-  background: url(../images/default_post_cover.jpg) no-repeat center;
+  background: url(../images/default_post_cover.png) no-repeat center;
   background-size: cover;
 }
 
