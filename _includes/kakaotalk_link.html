@@ -1,27 +1,57 @@
 <script type="text/javascript">
   //<![CDATA[
-  // // 사용할 앱의 JavaScript 키를 설정해 주세요.
-  Kakao.init("994841166b0a536f485ba220ce69c55c");
   // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
   var ogImg = $('meta[property="og:image"]')
     .attr("content")
     .replace("tech.toktokhan.dev", "toktokhan.github.io");
   var ogTitle = $('meta[property="og:title"]').attr("content");
+  var ogDescription = $('meta[property="og:description"]').attr("content");
   var ogUrl = $('meta[property="og:url"]').attr("content");
-  Kakao.Link.createTalkLinkButton({
-    container: "#kakao-link-btn",
-    label: ogTitle,
-    image: {
-      src: ogImg,
-      width: "300",
-      height: "200",
-    },
-    webButton: {
-      text: "똑똑한개발자 기술블로그",
-      url: ogUrl, // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
-    },
-    forwardable: true,
-  });
+  //   Kakao.Link.createDefaultButton({
+  //     container: "#kakao-link-btn",
+  //     label: ogTitle,
+  //     objectType: 'feed',
+  //     image: {
+  //       src: ogImg,
+  //       width: "300",
+  //       height: "200",
+  //     },
+  //     webButton: {
+  //       text: "똑똑한개발자 기술블로그",
+  //       url: ogUrl, // 앱 설정의 웹 플랫폼에 등록한 도메인의 URL이어야 합니다.
+  //     },
+  //     forwardable: true,
+  //   });
+  if (window.Kakao) {
+    const kakao = window.Kakao;
+    // 중복 initialization 방지
+    if (!kakao.isInitialized()) {
+      // 두번째 step 에서 가져온 javascript key 를 이용하여 initialize
+      Kakao.init("994841166b0a536f485ba220ce69c55c");
+    }
+    kakao.Link.createDefaultButton({
+      container: "#kakao-link-btn",
+      objectType: "feed",
+      content: {
+        title: ogTitle,
+        description: ogDescription,
+        imageUrl: ogImg, // i.e. process.env.FETCH_URL + '/logo.png'
+        link: {
+          mobileWebUrl: window.location.href,
+          webUrl: window.location.href,
+        },
+      },
+      buttons: [
+        {
+          title: "포스트 보러가기",
+          link: {
+            mobileWebUrl: window.location.href,
+            webUrl: window.location.href,
+          },
+        },
+      ],
+    });
+  }
   //]]>
 </script>
 <script>
