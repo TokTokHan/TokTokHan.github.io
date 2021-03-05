@@ -202,6 +202,13 @@ for small screen(<720px):
   background-color: #fff;
 }
 
+#header_container {
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 475px);
+  width: 100%;
+}
 #logo {
   position: absolute;
   z-index: 5;
