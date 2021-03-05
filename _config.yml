@@ -1,8 +1,8 @@
 title: 똑똑한개발자 기술 블로그
 email: contact@toktokhan.dev
 description: |
-  Connect Everything 새로운 연결, 새로운 세상.
-  연결의 혁신으로 세상은 더욱 가깝고 새로워진다고 카카오는 믿습니다.
+  세상을 놀라게 할 IT 서비스를
+  함께 성장하며 만들어갑니다.
 baseurl: ""
 url: "https://tech.toktokhan.dev"
 timezone: Asia/Seoul
@@ -51,7 +51,7 @@ keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
 author: contact@toktokhan.dev
-image: "/assets/images/default_blog_cover.jpg"
+image: "/assets/images/default_blog_cover.png"
 asset_url: /assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets

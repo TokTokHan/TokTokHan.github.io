@@ -440,6 +440,7 @@ for small screen(<720px):
 
 #cover h1,
 #cover p {
+  text-align: left;
   width: 80%; /* @@iolo */
   max-width: 780px;
   margin: 0 auto;
