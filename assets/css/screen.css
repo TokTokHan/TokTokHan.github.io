@@ -204,6 +204,7 @@ for small screen(<720px):
 
 #logo {
   position: absolute;
+  z-index: 5;
   top: 0;
   left: 30px;
   width: 123px;
