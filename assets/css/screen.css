@@ -206,12 +206,13 @@ for small screen(<720px):
   height: 60px;
   position: absolute;
   top: 0;
-  left: calc(50% - 475px);
+  left: 0px;
   width: 100%;
 }
+
 @media only screen and (min-width: 720px) {
   #header_container {
-    left: 0px;
+    left: calc(50% - 475px);
   }
 }
 #logo {
