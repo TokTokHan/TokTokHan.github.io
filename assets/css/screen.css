@@ -486,6 +486,12 @@ for small screen(<720px):
   font-size: 15px;
   color: #4575f5 !important;
 }
+#cover .date {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+  color: #808080;
+}
 #cover video {
   display: none; /* show/remove by script */
   position: absolute;
