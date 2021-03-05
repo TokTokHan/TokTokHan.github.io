@@ -1,13 +1,13 @@
-title: kakao 기술 블로그
-email: opensource@kakaocorp.com
+title: 똑똑한개발자 기술 블로그
+email: contact@toktokhan.dev
 description: |
   Connect Everything 새로운 연결, 새로운 세상.
   연결의 혁신으로 세상은 더욱 가깝고 새로워진다고 카카오는 믿습니다.
-baseurl: ''
-url: 'http://tech.kakao.com'
-timezone: Asia/Seoul 
+baseurl: ""
+url: "https://tech.toktokhan.dev"
+timezone: Asia/Seoul
 
-repository: kakao/kakao.github.io
+repository: TokTokHan/TokTokHan.github.io
 
 permalink: /:year/:month/:day/:title/
 
@@ -23,7 +23,7 @@ plugins:
   - jekyll-paginate
 
 paginate: 5
-paginate_path: '/page/:num/'
+paginate_path: "/page/:num/"
 
 collections:
   authors:
@@ -35,12 +35,12 @@ collections:
 
 defaults:
   - scope:
-      path: ''
+      path: ""
       type: authors
     values:
       layout: author
   - scope:
-      path: ''
+      path: ""
       type: tags
     values:
       layout: tag
@@ -50,19 +50,17 @@ exclude: [README.md, Gemfile, Gemfile.lock]
 keep_files: [assets, files]
 github: [metadata]
 # iolo's custom
-author: opensource@kakaocorp.com
-image: '/assets/images/default_blog_cover.jpg'
+author: contact@toktokhan.dev
+image: "/assets/images/default_blog_cover.jpg"
 asset_url: /assets
 #asset_url: //meta-kage.kakaocdn.net/dn/osa/blog/assets
 #asset_url: //t1.daumcdn.net/osa/blog/assets
 google_analytics:
-  ua: 'UA-72007721-1'
+  ua: "G-SB8V76F3J5"
 facebook:
-  app_id: '1204347326263800'
+  app_id: "1204347326263800"
   username: nkakao
-twitter:
-  username: kakaodev
-google_plus:
-  username: kakaodev
+instagram:
+  username: toktokhan.dev
 github_url:
-  username: kakao
+  username: TokTokHan
