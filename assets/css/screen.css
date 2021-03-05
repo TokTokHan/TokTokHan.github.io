@@ -486,11 +486,19 @@ for small screen(<720px):
   font-size: 15px;
   color: #4575f5 !important;
 }
+#cover .tag_large {
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: solid 2px #4575f5;
+  background-color: #fff;
+  color: #4575f5 !important;
+}
 #cover .date {
   font-size: 16px;
   line-height: 1.5;
   text-align: left;
   color: #808080;
+  margin-top: 10px;
 }
 #cover video {
   display: none; /* show/remove by script */
@@ -800,11 +808,11 @@ body.page-template #cover {
 }
 
 body.author-template #cover {
-  background-image: url(../images/default_author_cover.jpg);
+  background-image: url(../images/default_author_cover.png);
 }
 
 body.tag-template #cover {
-  background-image: url(../images/default_tag_cover.jpg);
+  background-image: url(../images/default_tag_cover.png);
 }
 
 body.home-template #cover p,
