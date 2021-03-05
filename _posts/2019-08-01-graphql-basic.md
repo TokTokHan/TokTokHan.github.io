@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'GraphQL 개념잡기'
-author: hoon.choi
+title: "기술블로그 테스트"
+author: suji.park
 date: 2019-08-01 12:00
-tags: [graphql]
+tags: [design]
 ---
 
 GraphQL은 페이스북에서 만든 쿼리 언어입니다. GrpahQL은 요즘 개발자들 사이에서 자주 입에 오르내리고 있으나, 2019년 7월 기준으로 얼리스테이지(early-stage)임은 분명합니다. 국내에서 GraphQL API를 Open API로 공개한 곳은 드뭅니다. 또한, 해외의 경우, Github 사례([Github v4 GraphQL](https://developer.github.com/v4/))를 찾을 수는 있지만, 전반적으로 GraphQL API를 Open API로 공개한 곳은 많지 않습니다. 하지만 등장한지 얼마되지 않았음에도 불구하고, GraphQL의 인기는 매우 가파르게 올라가고 있다는 사실을 확인 할 수 있습니다.
@@ -14,11 +14,11 @@ GraphQL은 페이스북에서 만든 쿼리 언어입니다. GrpahQL은 요즘 �
 
 Graph QL(이하 gql)은 Structed Query Language(이하 sql)와 마찬가지로 쿼리 언어입니다. 하지만 gql과 sql의 언어적 구조 차이는 매우 큽니다. 또한 gql과 sql이 실전에서 쓰이는 방식의 차이도 매우 큽니다. gql과 sql의 언어적 구조 차이가 활용 측면에서의 차이를 가져왔습니다. 이 둘은 애초에 탄생 시기도 다르고 배경도 다릅니다. sql은 **데이터베이스 시스템**에 저장된 데이터를 효율적으로 가져오는 것이 목적이고, gql은 **웹 클라이언트**가 데이터를 서버로 부터 효율적으로 가져오는 것이 목적입니다. sql의 문장(statement)은 주로 백앤드 시스템에서 작성하고 호출 하는 반면, gql의 문장은 주로 클라이언트 시스템에서 작성하고 호출 합니다.
 
-
 ```sql
 SELECT plot_id, species_id, sex, weight, ROUND(weight / 1000.0, 2) FROM surveys;
 ```
-*sql 쿼리 예시*
+
+_sql 쿼리 예시_
 
 ```graphql
 {
@@ -30,7 +30,8 @@ SELECT plot_id, species_id, sex, weight, ROUND(weight / 1000.0, 2) FROM surveys;
   }
 }
 ```
-*gql 쿼리 예시*
+
+_gql 쿼리 예시_
 
 서버사이드 gql 어플리케이션은 gql로 작성된 쿼리를 입력으로 받아 쿼리를 처리한 결과를 다시 클라이언트로 돌려줍니다. HTTP API 자체가 특정 데이터베이스나 플렛폼에 종속적이지 않은것 처럼 마찬가지로 gql 역시 어떠한 특정 데이터베이스나 플렛폼에 종속적이지 않습니다. 심지어 네트워크 방식에도 종속적이지 않습니다. 일반적으로 gql의 인터페이스간 송수신은 네트워크 레이어 L7의 HTTP POST 메서드와 웹소켓 프로토콜을 활용합니다. 필요에 따라서는 얼마든지 L4의 TCP/UDP를 활용하거나 심지어 L2 형식의 이더넷 프레임을 활용 할 수도 있습니다.
 
@@ -50,6 +51,7 @@ REST API는 URL, METHOD등을 조합하기 때문에 다양한 Endpoint가 존�
 ## GraphQL의 구조
 
 ### 쿼리/뮤테이션(query/mutation)
+
 쿼리와 뮤테이션 그리고 응답 내용의 구조는 상당히 직관적 입니다. 요청하는 쿼리문의 구조와 응답 내용의 구조는 거의 일치 합니다.
 ![GraphQL 쿼리문(좌측)과 응답 데이터 형식(우측)](/files/graphql-example.png)
 
@@ -120,17 +122,18 @@ type Character {
   appearsIn: [Episode!]!
 }
 ```
-* 오브젝트 타입 : Character
-* 필드 : name, appearsIn
-* 스칼라 타입 : String, ID, Int 등
-* 느낌표(!) : 필수 값을 의미(non-nullable)
-* 대괄호([, ]) : 배열을 의미(array)
 
-### 리졸버(resolver) 
+- 오브젝트 타입 : Character
+- 필드 : name, appearsIn
+- 스칼라 타입 : String, ID, Int 등
+- 느낌표(!) : 필수 값을 의미(non-nullable)
+- 대괄호([, ]) : 배열을 의미(array)
+
+### 리졸버(resolver)
 
 데이터베이스 사용시, 데이터를 가져오기 위해서 sql을 작성 했습니다. 또한, 데이터베이스에는 데이터베이스 어플리케이션을 사용하여 데이터를 가져오는 구체적인 과정이 구현 되어 있습니다. 그러나 gql 에서는 데이터를 가져오는 구체적인 과정을 직접 구현 해야 합니다. gql 쿼리문 파싱은 대부분의 gql 라이브러리에서 처리를 하지만, gql에서 데이터를 가져오는 구체적인 과정은 resolver(이하 리졸버)가 담당하고, 이를 직접 구현 해야 합니다. 프로그래머는 리졸버를 직접 구현해야하는 부담은 있지만, 이를 통해서 데이터 source의 종류에 상관 없이 구현이 가능 합니다. 예를 들어서, 리졸버를 통해 데이터를 데이터베이스에서 가져 올 수 있고, 일반 파일에서 가져 올 수 있고, 심지어 http, SOAP와 같은 네트워크 프로토콜을 활용해서 원격 데이터를 가져올 수 있 습니다. 덧붙이면, 이러한 특성을 이용하면 legacy 시스템을 gql 기반으로 바꾸는데 활용 할 수 있습니다.
 
-gql 쿼리에서는 각각의 필드마다 함수가 하나씩 존재 한다고 생각하면 됩니다. 이 함수는 다음 타입을 반환합니다.  이러한 각각의 함수를 리졸버(resolver)라고 합니다. 만약 필드가 스칼라 값(문자열이나 숫자와 같은 primitive 타입)인 경우에는 실행이 종료됩니다. 즉 더 이상의 연쇄적인 리졸버 호출이 일어나지 않습니다. 하지만 필드의 타입이 스칼라 타입이 아닌 우리가 정의한 타입이라면 해당 타입의 리졸버를 호출되게 됩니다.
+gql 쿼리에서는 각각의 필드마다 함수가 하나씩 존재 한다고 생각하면 됩니다. 이 함수는 다음 타입을 반환합니다. 이러한 각각의 함수를 리졸버(resolver)라고 합니다. 만약 필드가 스칼라 값(문자열이나 숫자와 같은 primitive 타입)인 경우에는 실행이 종료됩니다. 즉 더 이상의 연쇄적인 리졸버 호출이 일어나지 않습니다. 하지만 필드의 타입이 스칼라 타입이 아닌 우리가 정의한 타입이라면 해당 타입의 리졸버를 호출되게 됩니다.
 
 이러한 연쇄적 리졸버 호출은 DFS(Depth First Search)로 구현 되어있을것으로 추측합니다. 이점이 바로 gql이 Graph라는 단어를 쓴 이유가 아닐까 생각합니다. 연쇄 리졸버 호출은 여러모로 장점이 있습니다. 연쇄 리졸버 특성을 잘 활용하면 DBMS의 관계에 대한 쿼리를 매우 쉽고, 효율적으로 처리 할 수 있습니다. 예를들어 gql의 query에서 어떤 타입의 필드 중 하나가 해당 타입과 1:n의 관계를 맺고 있다고 가정해보겠습니다.
 
@@ -144,35 +147,35 @@ type Query {
 }
 
 type User {
-	id: ID!
-	name: String!
-	sex: SEX!
-	birthDay: String!
-	phoneNumber: String!
+  id: ID!
+  name: String!
+  sex: SEX!
+  birthDay: String!
+  phoneNumber: String!
 }
 
 type Limit {
-	id: ID!
-	UserId: ID
-	max: Int!
-	amount: Int
-	user: User
+  id: ID!
+  UserId: ID
+  max: Int!
+  amount: Int
+  user: User
 }
 
 type Payment {
-	id: ID!
-	limit: Limit!
-	user: User!
-	pg: PaymentGateway!
-	productName: String!
-	amount: Int!
-	ref: String
-	createdAt: String!
-	updatedAt: String!
+  id: ID!
+  limit: Limit!
+  user: User!
+  pg: PaymentGateway!
+  productName: String!
+  amount: Int!
+  ref: String
+  createdAt: String!
+  updatedAt: String!
 }
 ```
 
-여기에서는 User와 Limit는 1:1의 관계이고 User와 Payment는 1:n의 관계입니다. 
+여기에서는 User와 Limit는 1:1의 관계이고 User와 Payment는 1:n의 관계입니다.
 
 ```graphql
 {
@@ -205,8 +208,8 @@ type Payment {
     paymentsByUser: async (parent, { userId }, context, info) => {
         const limit = await Limit.findOne({ where: { UserId: userId } })
         const payments = await Payment.findAll({ where: { LimitId: limit.id } })
-        return payments        
-    },  
+        return payments
+    },
   },
   Payment: {
     limit: async (payment, args, context, info) => {
@@ -215,10 +218,10 @@ type Payment {
   }
 ```
 
-* 첫번째 인자는 parent로 연쇄적 리졸버 호출에서 부모 리졸버가 리턴한 객체입니다. 이 객체를 활용해서 현재 리졸버가 내보낼 값을 조절 할 수 있습니다.
-* 두번째 인자는 args로 쿼리에서 입력으로 넣은 인자입니다. 
-* 세번째 인자는 context로 모든 리졸버에게 전달이 됩니다. 주로 미들웨어를 통해 입력된 값들이 들어 있습니다. 로그인 정보 혹은 권한과 같이 주요 컨텍스트 관련 정보를 가지고 있습니다.
-* 네번째 인자는 info로 스키마 정보와 더불어 현재 쿼리의 특정 필드 정보를 가지고 있습니다. 잘 사용하지 않는 필드입니다.
+- 첫번째 인자는 parent로 연쇄적 리졸버 호출에서 부모 리졸버가 리턴한 객체입니다. 이 객체를 활용해서 현재 리졸버가 내보낼 값을 조절 할 수 있습니다.
+- 두번째 인자는 args로 쿼리에서 입력으로 넣은 인자입니다.
+- 세번째 인자는 context로 모든 리졸버에게 전달이 됩니다. 주로 미들웨어를 통해 입력된 값들이 들어 있습니다. 로그인 정보 혹은 권한과 같이 주요 컨텍스트 관련 정보를 가지고 있습니다.
+- 네번째 인자는 info로 스키마 정보와 더불어 현재 쿼리의 특정 필드 정보를 가지고 있습니다. 잘 사용하지 않는 필드입니다.
 
 ### 인트로스펙션(introspection)
 
@@ -238,8 +241,8 @@ gql 자체는 쿼리 언어입니다. 이것 만으로는 할 수 있는 것이 
 
 대표적인 gql 라이브러리 셋에 대한 링크는 2개를 소개합니다. 릴레이는 GraphQL의 어머니인 Facebook이 만들었습니다. 하지만 개인적인 의견으로는 현재(2019년 7월)버전의 릴레이는 사용하기 매우 번거롭게 디자인 되어 있다고 생각합니다. 개인적으로는 아폴로가 사용하기 편했습니다.
 
-* [릴레이(Relay)](https://relay.dev/)
-* [아폴로(Apollo GraphQL)](https://www.apollographql.com/)
+- [릴레이(Relay)](https://relay.dev/)
+- [아폴로(Apollo GraphQL)](https://www.apollographql.com/)
 
 ## 실제 GraphQL로 비지니스 로직 작성하기
 
@@ -247,10 +250,9 @@ gql 자체는 쿼리 언어입니다. 이것 만으로는 할 수 있는 것이 
 
 앞서서 gql에 대한 개념을 익혔고, 비지니스 로직 작성을 간단히 보여드리겠습니다. 구현시, 비지니스 로직은 실제 리졸버 함수에 담지 않습니다. 로직은 비지니스 로직 레이어 (다른 파일의 다른 함수)에 작성을 하는 것을 권장합니다. 위 그림에도 나왔지만 이는 REST API를 제작할때 사용하는 패턴과 동일한 패턴입니다.
 
-
 ```javascript
-    requestPaymentSession: async (parent, { 
-      pgId, name, sex, birthDay, phoneNumber, amount, productName, ref 
+    requestPaymentSession: async (parent, {
+      pgId, name, sex, birthDay, phoneNumber, amount, productName, ref
     }, context, info) => {
       const ret = await requestPaymentSession({ pgId, name, birthDay, phoneNumber, sex, amount, productName, ref })
 
@@ -264,7 +266,8 @@ gql 자체는 쿼리 언어입니다. 이것 만으로는 할 수 있는 것이 
       return removeSymbol(ret)
     }
 ```
-*실제 구현한 비지니스 로직 관련 리졸버*
+
+_실제 구현한 비지니스 로직 관련 리졸버_
 
 ## 정리
 
@@ -272,7 +275,8 @@ gql은 퍼포먼스적인 장점이 분명 존재합니다. 하지만 개인적�
 
 개발자 여러분에게 안타까운 소식을 전하자면, 이 글을 읽었다고 해서 gql을 바로 실전에서 사용하기는 쉽지 않을 것입니다. 이 글에서는 gql의 클라이언트 모듈에 대해서는 구체적으로 언급하지도 않았습니다. 특히 react를 혼합해서 사용하려면, 또 다시 가파른 고개를 넘어서야 제대로 사용 할 수 있을 것입니다. 요즘 react는 flux 아키텍쳐가 점령 했습니다. flux 아키텍쳐는 아름답지만, flux와 함께 gql을 구현하는 일은 또 다른 숙제가 될 것입니다. 개인적인 생각으로는 apollo client의 [local statment management](https://www.apollographql.com/docs/react/essentials/local-state) 기능은 flux 아키텍쳐를 구체화하여 구현한 redux를 완전히 대처 가능하다고 생각합니다. 추후에 기회가 된다면 react와 apollo 조합에 대해서 이야기 해볼까 합니다. 항상 공부하는 개발자의 모습은 아름답습니다. 이 세상의 모든 개발자 화이팅입니다.
 
-참고 사이트 
-* https://graphql.org
+참고 사이트
+
+- https://graphql.org
 
 > 이 글은 핀플레이 결제 프로젝트를 진행시 Graphql을 도입하며 얻은 경험을 바탕으로 작성하였습니다.
