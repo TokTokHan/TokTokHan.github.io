@@ -1161,10 +1161,11 @@ body.author-template #cover h1 {
 body.author-template #cover p {
   font-size: 16px;
   color: #808080;
+  padding-top: 0px;
 }
 body.author-template #cover h1,
 body.author-template #cover p {
-  max-width: 300px;
+  max-width: 250px;
   width: 100%; /* @@iolo */
   margin-right: 0px; /* 254px = 80(padding-left) + 144(#cover-author-image width) + 30(spacing) */
   text-align: left;
@@ -1172,8 +1173,8 @@ body.author-template #cover p {
 
 #cover-author-image {
   position: absolute;
-  left: 80px;
-  top: 78px; /* 78px = (310(#cover height) - 144(self height)) / 2 */
+  right: 270px;
+  top: 105px; /* 105px = (310(#cover height) - 100(self height)) / 2 */
   width: 100px;
   height: 100px;
   border-radius: 100%;
