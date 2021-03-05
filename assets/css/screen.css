@@ -471,6 +471,14 @@ for small screen(<720px):
   color: #fff;
 }
 
+#cover .tag {
+  padding: 5px 10px 3px;
+  border-radius: 5px;
+  border: solid 1px #4575f5;
+  background-color: #fff;
+  font-size: 15px;
+  color: #4575f5;
+}
 #cover video {
   display: none; /* show/remove by script */
   position: absolute;
