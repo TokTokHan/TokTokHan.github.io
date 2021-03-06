@@ -483,7 +483,7 @@ for small screen(<720px):
   color: #fff;
 }
 
-#cover .tag {
+#cover .custom_tag {
   padding: 5px 10px 3px;
   border-radius: 5px;
   border: solid 1px #4575f5;
@@ -1508,7 +1508,7 @@ body.page-template {
   }
 
   a.tag {
-    height: 20px;
+    /* height: 20px; */
     margin: 0 8px 8px 0;
     padding: 0 5px; /* @@iolo */
     border-radius: 2px;
