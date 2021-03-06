@@ -495,7 +495,7 @@ for small screen(<720px):
 }
 #cover .custom_tag:active,
 #cover .custom_tag:hover {
-  background-color: #e6e6e6;
+  background-color: #f6f6f6;
 }
 #cover .tag_large {
   margin-left: 80px;
@@ -721,7 +721,7 @@ a.tag {
 
 a.tag:active,
 a.tag:hover {
-  background-color: #e6e6e6;
+  background-color: #f6f6f6;
 }
 
 #pagination {
@@ -758,6 +758,9 @@ a.tag:hover {
   width: 100%;
   height: 100%;
   display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #page-prev {
