@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Next.js 코드 컨벤션"
-author: jangwon.seo
+author: minjung.kim
 date: 2020-08-30 17:45
 tags: [react, next]
 ---
