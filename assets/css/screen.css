@@ -497,9 +497,10 @@ for small screen(<720px):
 #cover .custom_tag:hover {
   background-color: #f6f6f6;
 }
+
 #cover .tag_large {
-  margin-left: 80px;
-  padding: 7px 10px;
+  margin-left: 80px !important;
+  padding: 7px 10px 0px;
   border-radius: 10px;
   border: solid 2px #4575f5;
   background-color: #fff;
@@ -507,10 +508,19 @@ for small screen(<720px):
   width: fit-content;
   margin-left: 0;
 }
-
+@media only screen and (min-width: 720px) {
+  #cover .custom_tag {
+    padding: 3px ​6px 3px;
+    font-size: 12px;
+    margin-right: 5px;
+  }
+  #cover .tag_large {
+    padding: 5px 10px 0px;
+  }
+}
 @media only screen and (min-width: 940px) {
   #cover .tag_large {
-    margin-left: 20px;
+    margin-left: 20px !important;
   }
 }
 #cover .date {
