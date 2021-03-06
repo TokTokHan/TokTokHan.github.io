@@ -737,7 +737,7 @@ a.tag:hover {
   width: 20px;
   color: #1e1e1e;
   font-size: 14px;
-  line-height: 18px; /* 18px = 20(height) - 2(border) */
+  line-height: 22px; /* 22px = 20(height) + 2(border) */
   vertical-align: middle;
 }
 
