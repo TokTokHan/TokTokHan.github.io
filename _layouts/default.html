@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {% include head.html %}
+    {% include head.html %} {% if site.google_analytics %} {% include
+    google_analytics.html %} {% endif %}
   </head>
-  {% if site.google_analytics %} {% include google_analytics.html %} {% endif %}
   <body class="{{ page.layout | append: '-template' }}">
     {% include header.html %}
 
