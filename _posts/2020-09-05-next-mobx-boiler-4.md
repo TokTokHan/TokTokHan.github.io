@@ -3,7 +3,7 @@ layout: post
 title: "Next와 Mobx 정리 - [커스텀]"
 author: jangwon.seo
 date: 2020-09-05 13:15
-tags: [react, next, mobx]
+tags: [react, next, mobx, frontend]
 ---
 
 [Next.js app & document 커스텀]

@@ -3,7 +3,7 @@ layout: post
 title: "Next와 Mobx 정리 - [시작하기]"
 author: jangwon.seo
 date: 2020-08-15 14:48
-tags: [react, next, mobx]
+tags: [react, next, mobx, frontend]
 ---
 
 [Next.js 시작하기]

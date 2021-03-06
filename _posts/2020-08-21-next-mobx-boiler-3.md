@@ -3,7 +3,7 @@ layout: post
 title: "Next와 Mobx 정리 - [라이브러리 세팅]"
 author: jangwon.seo
 date: 2020-08-21 18:12
-tags: [react, next, mobx]
+tags: [react, next, mobx, frontend]
 ---
 
 [Next.js 라이브러리 세팅]

@@ -3,7 +3,7 @@ layout: post
 title: "Next.js 코드 컨벤션"
 author: minjung.kim
 date: 2020-08-30 17:45
-tags: [react, next]
+tags: [react, next, frontend]
 ---
 
 ## 시작하며
@@ -14,7 +14,7 @@ VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Pret
 #### 공통 사용 스택
 
 ```
-- Next.js, PWA, TypeScript, Styled-components, Storybook
+- Next.js, PWA, TypeScript, styled-components, Storybook
 - axios
 ```
 
