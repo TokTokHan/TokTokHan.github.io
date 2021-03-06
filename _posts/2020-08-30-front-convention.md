@@ -80,13 +80,37 @@ VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Pret
 
 - Admin 페이지 같은 경우, material-ui 적극 활용
 - material-ui/datepicker: 날짜를 달력으로 선택
-  - [Material DatePicker 커스텀(range로 사용하기) + Mobx](https://www.notion.so/Material-DatePicker-range-Mobx-0401fa643af7449c81f5ea4816884b22)
+  - [[Material DatePicker 커스텀(range로 사용하기) + Mobx](https://www.notion.so/Material-DatePicker-range-Mobx-0401fa643af7449c81f5ea4816884b22)]
 - ~~moment:~~ 날짜<br/>
   ⇒ dayjs 사용, moment의 경우 라이브러리가 너무 크며 업데이트 중단
 
   - react-hook-form: form
   - react-use-gesture: 모바일 드래그 모션
 
-- component는 스토리북을 열어 직접 확인 부탁드립니다. [Storybook 활용법](https://www.notion.so/Storybook-202709a641774221a1fb5448dc06c979)
+- component는 스토리북을 열어 직접 확인 부탁드립니다. [[Storybook 활용법](https://www.notion.so/Storybook-202709a641774221a1fb5448dc06c979)]
 
 _마지막 업데이트: 2021.01.25_
+
+## ESLint, Prettier 설정
+
+VSCode에 ESLint, Prettier Extension이 설치 되어 있어야 합니다.
+
+- ESLint는 코드의 잠재적 에러나 오류 탐지, Prettier는 코드 포매터에 집중하여 코드를 깔끔하게 만들어주는 역할을 합니다.
+- VSCode 설정 (window: `ctrl + ,` mac: `command + ,`)에서 `Format On Save`를 체크하면 저장할 때마다 바뀝니다.
+
+  참고: [[VSCode Extension 추천 및 설정](https://www.notion.so/VSCode-Extension-4b7e3a1b02194d12a5027d6c475d102a)]
+
+## `next-ts` 폴더 구조
+
+![frontend_structure](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2020_08/frontend_structure.png?raw=true){: width="400px", marginRight="auto"}
+
+- `.next`: 프로젝트 build로 생성되는 폴더
+- `.storybook`: Storybook 설정 폴더
+- `api`: 공통으로 사용 되는 api (Axios 커스텀)
+- `components`: 공통으로 사용 되는 컴포넌트 모음
+- `containers`: 해당 프로젝트에서 사용 되는 화면 구현
+- `layout`: 레이아웃에서 공통으로 사용 되는 style
+- `pages`: 파일 이름으로 라우터 생성
+- `public`: 이미지, 아이콘 등
+- `stores`: 전역상태관리 폴더
+- `utils`: 프로젝트마다 공통으로 사용될 만한 hooks, format 등 모음
