@@ -6,7 +6,7 @@ date: 2020-08-30 17:45
 tags: [react, next]
 ---
 
-### 시작하며
+## 시작하며
 
 해당 글은 똑똑한개발자 github에 있는 `next-ts`을 기준으로 작성되었습니다.<br/>
 VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Prettier가 다르게 보일 수 있습니다.
@@ -22,7 +22,6 @@ VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Pret
 
 ```json
 {
-  // ...
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@types/react-select": "^3.0.26",
@@ -72,7 +71,6 @@ VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Pret
     "tsconfig-paths-webpack-plugin": "^3.3.0",
     "typescript": "3.7.3"
   }
-  // ...
 }
 ```
 
@@ -83,7 +81,7 @@ VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Pret
 - Admin 페이지 같은 경우, material-ui 적극 활용
 - material-ui/datepicker: 날짜를 달력으로 선택
   - [Material DatePicker 커스텀(range로 사용하기) + Mobx](https://www.notion.so/Material-DatePicker-range-Mobx-0401fa643af7449c81f5ea4816884b22)
-- ~~moment:~~ 날짜
+- ~~moment:~~ 날짜<br/>
   ⇒ dayjs 사용, moment의 경우 라이브러리가 너무 크며 업데이트 중단
 
   - react-hook-form: form
