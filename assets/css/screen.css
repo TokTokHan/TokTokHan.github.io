@@ -966,6 +966,10 @@ body.tag-template #navbar {
   padding-left: 28px;
 }
 
+#post-content ul > li > p {
+  margin: 0px;
+}
+
 #post-content blockquote {
   margin: 28px 0;
   padding: 28px;
