@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Next와 Mobx 정리 - [1]"
+title: "Next와 Mobx 정리 - [시작하기]"
 author: jangwon.seo
 date: 2020-07-05 18:00
 tags: [react, next, mobx]
