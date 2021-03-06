@@ -12,9 +12,9 @@ Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹�
 ## 목차
 
 1. **Next.js 란?**
-2. [Next.js 시작하기](https://blog.toktokhan.dev/next-mobx-boiler-2/)
-3. [Next.js 라이브러리 세팅](https://blog.toktokhan.dev/next-mobx-boiler-3/)
-4. [Next.js app & document 커스텀](https://blog.toktokhan.dev/next-mobx-boiler-4/)
+2. [Next.js 시작하기](https://tech.toktokhan.dev/2020/07/05/next-mobx-boiler-2/)
+3. [Next.js 라이브러리 세팅](https://tech.toktokhan.dev/2020/07/10/next-mobx-boiler-3/)
+4. [Next.js app & document 커스텀](https://tech.toktokhan.dev/2020/07/15/next-mobx-boiler-4/)
 
 ## Next.js 란?
 
