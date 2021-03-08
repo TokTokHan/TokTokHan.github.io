@@ -16,6 +16,7 @@ strip_html %} {% assign meta_url = site.url %} {% assign meta_image = site.image
 '://' %} {% assign meta_image = meta_image | prepend: site.url %} {% endunless
 %}
 <title>{{ meta_title }}</title>
+<link rel="canonical" href="https://tech.toktokhan.dev/" />
 <meta name="title" content="{{ meta_title }}" />
 <meta name="author" content="{{ meta_author }}" />
 <meta name="description" content="{{ meta_description }}" />
