@@ -54,7 +54,7 @@ deeplink와 universal link(app links)를 사용해서 2가지 상황에 대해�
 
 - universal link 설정을 하면, 디바이스에 자동으로 링크를 인식해서 앱을 띄울지 선택한다.
 
-![redirect_page](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/universal_link.png?raw=true)
+![universal_link](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/universal_link.png?raw=true){: width="400px", marginRight="auto"}
 
 # 네이티브 파트
 
@@ -62,15 +62,15 @@ deeplink와 universal link(app links)를 사용해서 2가지 상황에 대해�
 
 `react-native-device-info` 라이브러리를 사용해서 userAgent를 가져와 고유값[`@toktokhan`] 를 넣어줍니다.
 
-```javascript
+```jsx
 ...
 import DeviceInfo from 'react-native-device-info';
 
 const App = () => {
-	...
+...
   return (
     <WebView
-			...
+    ...
 	    userAgent={`${DeviceInfo.userAgent}@toktokhan`}/>
   );
 };
@@ -153,10 +153,11 @@ const deepLink = (url, type) => {
 };
 
 useEffect(() => {
-	...
+...
   //IOS && ANDROID : 앱이 딥링크로 처음 실행될때, 앱이 열려있지 않을 때
   Linking.getInitialURL().then((url) => deepLink(url));
-	//IOS : 앱이 딥링크로 처음 실행될때, 앱이 열려있지 않을 때 && 앱이 실행 중일 때
+
+  //IOS : 앱이 딥링크로 처음 실행될때, 앱이 열려있지 않을 때 && 앱이 실행 중일 때
   //ANDROID : 앱이 실행 중일 때
   Linking.addEventListener('url', deepLinkListener);
 	return () => {
