@@ -461,6 +461,21 @@ for small screen(<720px):
   overflow: hidden;
 }
 
+#cover h5 {
+  font-weight: 400;
+  width: 80%; /* @@iolo */
+  max-width: 940px;
+  margin: 0 auto;
+  color: #666;
+  white-space: pre-line;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-height: 1.5em;
+  max-height: 3em;
+}
 #cover h1 {
   font-size: 36px;
   line-height: 52px; /* 52px = 36(font-size) + 16(line-spacing) */
@@ -469,9 +484,6 @@ for small screen(<720px):
 #cover p {
   font-size: 14px;
   line-height: 22px; /* 22px = 14(font-size) + 8(line-spacing) @@iolo */
-}
-
-#cover h1 + p {
   padding-top: 14px; /* 14px = 30 - 16(above line-spacing) */
 }
 
@@ -527,7 +539,6 @@ for small screen(<720px):
   line-height: 1.5;
   text-align: left;
   color: #808080;
-  margin-top: 10px;
 }
 #cover video {
   display: none; /* show/remove by script */
