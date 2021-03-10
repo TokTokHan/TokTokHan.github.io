@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Next.js 코드 컨벤션"
+description: "Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹을 개발하기 위한 기본 세팅 작업을 boilerplate로 만들어보는 과정에 대한 내용을 정리했습니다."
 author: minjung.kim
 date: 2020-08-30 17:45
 tags: [react, next, frontend]
@@ -8,7 +9,7 @@ tags: [react, next, frontend]
 
 ## 시작하며
 
-해당 글은 똑똑한개발자 github에 있는 `next-ts`을 기준으로 작성되었습니다.<br/>
+해당 글은 [똑똑한개발자](https://toktokhan.dev/) github에 있는 `next-ts`을 기준으로 작성되었습니다.<br/>
 VSCode 기준으로 설정 되었으며, 다른 IDE를 쓸 경우 ESLint와 Prettier가 다르게 보일 수 있습니다.
 
 #### 공통 사용 스택

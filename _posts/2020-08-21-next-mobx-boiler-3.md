@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Next와 Mobx 정리 - [라이브러리 세팅]"
+description: "Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹을 개발하기 위한 기본 세팅 작업을 boilerplate로 만들어보는 과정에 대한 내용을 정리했습니다."
 author: jangwon.seo
 date: 2020-08-21 18:12
 tags: [react, next, mobx, frontend]
@@ -130,4 +131,4 @@ $ yarn add -D @babel/plugin-proposal-class-properties @babel/plugin-proposal-dec
 
 - [Next.js 사이트](https://nextjs.org/docs/getting-started)
 - [Next.js with Mobx](https://www.themikelewis.com/post/nextjs-with-mobx)
-- [[똑똑한개발사 웹사이트](https://toktokhan.dev/)]
+- [[똑똑한개발자 웹사이트](https://toktokhan.dev/)]

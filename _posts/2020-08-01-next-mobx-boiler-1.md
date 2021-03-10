@@ -163,4 +163,4 @@ class Home extend Component {
   ](https://velog.io/@jakeseo_me/Next.js-%EB%B9%A8%EB%A6%AC-%EB%B0%B0%EC%9A%B0%EA%B8%B0-y0jz9oebn0)
 - [Next.js 제대로 알고 쓰자
   ](https://medium.com/@msj9121/next-js-%EC%A0%9C%EB%8C%80%EB%A1%9C-%EC%95%8C%EA%B3%A0-%EC%93%B0%EC%9E%90-8727f76614c9)
-- [[똑똑한개발사 웹사이트](https://toktokhan.dev/)]
+- [[똑똑한개발자 웹사이트](https://toktokhan.dev/)]

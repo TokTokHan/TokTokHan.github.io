@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Next와 Mobx 정리 - [시작하기]"
+description: "Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹을 개발하기 위한 기본 세팅 작업을 boilerplate로 만들어보는 과정에 대한 내용을 정리했습니다."
 author: jangwon.seo
 date: 2020-08-15 14:48
 tags: [react, next, mobx, frontend]
@@ -116,4 +117,4 @@ route 파라미터와 queryString이 같은 경우
 ## 참고 사이트
 
 - [Next.js 사이트](https://nextjs.org/docs/getting-started)
-- [[똑똑한개발사 웹사이트](https://toktokhan.dev/)]
+- [[똑똑한개발자 웹사이트](https://toktokhan.dev/)]
