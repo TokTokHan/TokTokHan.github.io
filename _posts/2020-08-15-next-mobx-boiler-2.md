@@ -60,7 +60,7 @@ Next.js에서 **page**는`pages`폴더에 리액트 컴포넌트 형태로 저�
 
 - `pages/post/[pid].js`
 
-```javascript
+```jsx
 import { useRouter } from "next/router";
 
 const Post = () => {

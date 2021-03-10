@@ -43,7 +43,7 @@ Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹�
 
 - **/page/index.js**
 
-```javascript
+```jsx
 import Link from "next/link";
 import Router from "next/router";
 
@@ -77,7 +77,7 @@ class Home extends Component {
 
 - **/server.js**
 
-```javascript
+```jsx
 const next = require("next");
 const app = next({ dev: process.env.NODE_ENV === "production" });
 const express = require("express");
@@ -107,7 +107,7 @@ Next의 핵심기능인 `getInitialProps` 함수를 통해 데이터를 가져�
 
 - **React Example**
 
-```javascript
+```jsx
 class Home extend Component {
     state = {
         books: []
@@ -124,7 +124,7 @@ class Home extend Component {
 
 - **Next Example**
 
-```javascript
+```jsx
 class Home extend Component {
     static async getInitialProps () {
         const res = await axios.get(`....url`);

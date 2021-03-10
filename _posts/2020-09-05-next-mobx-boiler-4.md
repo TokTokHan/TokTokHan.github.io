@@ -33,7 +33,7 @@ Next.js에 대한 이해와 Mobx와 같은 라이브러리들을 사용해 웹�
 
 `/pages/_app.js`를 생성하면 커스텀을 진행할 수 있습니다.
 
-```javascript
+```jsx
 import * as React from "react";
 import { AppProps } from "next/app";
 import { Provider } from "mobx-react";
@@ -77,7 +77,7 @@ export default MyApp;
 
 `/pages/_document.js`를 생성하면 커스텀을 진행할 수 있습니다.
 
-```javascript
+```jsx
 import * as React from "react";
 import { GetStaticProps } from "next";
 import Document, { Head, Main, NextScript } from "next/document";
