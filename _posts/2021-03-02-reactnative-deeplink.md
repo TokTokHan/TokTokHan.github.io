@@ -16,7 +16,7 @@ tags: [reactnative, android, ios]
 - 앱이 설치된 유저의 경우 앱 실행 후 링크 이동
 - 앱이 설치되지 않은 유저의 경우 웹 다운로드 페이지로 이동
 
-  ![redirect_page](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/redirect_page.png?raw=true){: width="400px", marginRight="auto"}
+  ![redirect_page](/files/posts/2021_03/redirect_page.png?raw=true){: width="400px", marginRight="auto"}
 
   클라이언트 측에서 전달받은 다운로드 페이지
 
@@ -54,7 +54,7 @@ deeplink와 universal link(app links)를 사용해서 2가지 상황에 대해�
 
 - universal link 설정을 하면, 디바이스에 자동으로 링크를 인식해서 앱을 띄울지 선택한다.
 
-![universal_link](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/universal_link.png?raw=true){: width="400px", marginRight="auto"}
+![universal_link](/files/posts/2021_03/universal_link.png?raw=true){: width="400px", marginRight="auto"}
 
 # 네이티브 파트
 
@@ -125,9 +125,9 @@ Universal Link를 사용할 경우 아래 코드도 함께 추가해주세요.
 
 ### 02. Xcode 수정
 
-![xcode_1](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/xcode_1.png?raw=true)
+![xcode_1](/files/posts/2021_03/xcode_1.png?raw=true)
 
-![xcode_2](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/xcode_2.png?raw=true)
+![xcode_2](/files/posts/2021_03/xcode_2.png?raw=true)
 
 ### 03. App.js 파일 수정
 
@@ -244,7 +244,7 @@ const checkUserAgent = () => {
 
 appID 에는 `<TeamID>.<Bundle-Identifier>` 을 입력해주세요!
 
-![apple_team_id](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2021_03/apple_team_id.png?raw=true)
+![apple_team_id](/files/posts/2021_03/apple_team_id.png?raw=true)
 
 TeamID는 빨간색 박스 부분에서 확인할 수 있습니다.
 

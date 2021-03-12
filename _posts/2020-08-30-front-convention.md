@@ -103,7 +103,7 @@ VSCode에 ESLint, Prettier Extension이 설치 되어 있어야 합니다.
 
 ## `next-ts` 폴더 구조
 
-![frontend_structure](https://github.com/TokTokHan/TokTokHan.github.io/blob/master/files/posts/2020_08/frontend_structure.png?raw=true){: width="400px", marginRight="auto"}
+![frontend_structure](/files/posts/2020_08/frontend_structure.png?raw=true){: width="400px", marginRight="auto"}
 
 - `.next`: 프로젝트 build로 생성되는 폴더
 - `.storybook`: Storybook 설정 폴더
