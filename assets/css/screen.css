@@ -1020,7 +1020,8 @@ body.tag-template #navbar {
   height: 1px;
   border: 0;
   border-top: 1px solid #d4d4d4;
-  margin: 3.2em 0;
+  margin-top: 0px;
+  margin-bottom: 3.2em;
   padding: 0;
 }
 
