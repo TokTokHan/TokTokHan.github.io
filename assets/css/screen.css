@@ -1,5 +1,24 @@
 /* common */
 
+.center_img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.center_img .caption {
+  margin-top: 10px !important;
+}
+.center_img > figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+li > p {
+  margin: 0px;
+}
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -1026,7 +1045,7 @@ body.tag-template #navbar {
 }
 
 #post-content figure img {
-  width: 100%;
+  max-width: 100%;
   border: 1px solid #e6e6e6;
   cursor: pointer;
 }
