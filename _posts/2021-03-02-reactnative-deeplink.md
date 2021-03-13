@@ -16,9 +16,9 @@ tags: [reactnative, android, ios]
 - 앱이 설치된 유저의 경우 앱 실행 후 링크 이동
 - 앱이 설치되지 않은 유저의 경우 웹 다운로드 페이지로 이동
 
-<div class="center_img">
+<div class="center_img" style="align-items: 'flex-start'">
     <figure>
-      <img src="/files/posts/2021_03/redirect_page.png" width='400px' alt="redirect_page"/>
+      <img src="/files/posts/2021_03/redirect_page.png" width='300px' alt="redirect_page"/>
       <figcaption class="caption">redirect_page</figcaption>
    </figure>
 </div>
