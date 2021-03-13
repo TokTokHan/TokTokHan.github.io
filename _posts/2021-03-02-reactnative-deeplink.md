@@ -16,10 +16,9 @@ tags: [reactnative, android, ios]
 - 앱이 설치된 유저의 경우 앱 실행 후 링크 이동
 - 앱이 설치되지 않은 유저의 경우 웹 다운로드 페이지로 이동
 
-<div class="center_img" style="align-items: 'flex-start'">
+<div class="center_img" style="align-items: flex-start">
     <figure>
       <img src="/files/posts/2021_03/redirect_page.png" width='300px' alt="redirect_page"/>
-      <figcaption class="caption">redirect_page</figcaption>
    </figure>
 </div>
   클라이언트 측에서 전달받은 다운로드 페이지
@@ -59,7 +58,7 @@ deeplink와 universal link(app links)를 사용해서 2가지 상황에 대해�
 - universal link 설정을 하면, 디바이스에 자동으로 링크를 인식해서 앱을 띄울지 선택한다.
 
 <div class="center_img">
-    <figure>
+    <figure style="align-items: flex-start">
       <img src="/files/posts/2021_03/universal_link.png" width='400px' alt="universal_link"/>
    </figure>
 </div>
